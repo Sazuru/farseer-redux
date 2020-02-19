@@ -6,7 +6,7 @@ import App from "./containers/App";
 
 import * as serviceWorker from "./serviceWorker";
 
-import "./index.css";
+import "./styles/styles.css";
 
 ReactDOM.render(
   <Provider store={store}>
