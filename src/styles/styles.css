@@ -167,7 +167,16 @@ h3 {
   letter-spacing: 0.5px;
   transition: 0.2s ease-out;
   cursor: pointer;
+  margin-right: 3px;
 }
 .btn:hover {
   background-color: #6d8cb0;
+}
+.photo {
+  display: inline-block;
+  margin: 10px 2px;
+  width: 130px;
+}
+.error {
+  color: #ff0000;
 }

@@ -8,11 +8,13 @@ export class User extends React.Component {
     if (error) {
       return <p>Во время запроса произошла ошибка, обновите страницу</p>;
     }
+
     if (isFetching) {
       return <p>Загружаю...</p>;
     }
+
     if (name) {
-      return <p>Привет, {name}</p>;
+      return <p>Привет, {name}!</p>;
     } else {
       return (
         <button className="btn" onClick={this.props.handleLogin}>
@@ -22,11 +24,13 @@ export class User extends React.Component {
     }
   };
   render() {
-    console.log("<User/> render");
     return <div className="ib user">{this.renderTemplate()}</div>;
   }
 }
 
 User.propTypes = {
   name: PropTypes.string.isRequired,
+  error: PropTypes.string,
+  isFetching: PropTypes.bool.isRequired,
+  handleLogin: PropTypes.func.isRequired,
 };
