@@ -38,5 +38,6 @@
   },
   "devDependencies": {
     "redux-logger": "^3.0.6"
-  }
+  },
+  "homepage": "https://sazuru.github.io/farseer-redux/"
 }
