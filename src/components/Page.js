@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import PhotoManager from "./PhotoManager";
+import React from 'react';
+import PropTypes from 'prop-types';
+import PhotoManager from './PhotoManager';
 
 export class Page extends React.Component {
-  onBtnClick = event => {
+  onBtnClick = (event) => {
     const year = +event.currentTarget.innerText;
     this.props.getPhotos(year);
   };
