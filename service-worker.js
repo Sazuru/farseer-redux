@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/farseer-redux/precache-manifest.77e8d626feb39916642b60f64299d000.js"
+  "/farseer-redux/precache-manifest.8c875243d802ef29fc1529bbeaa28c68.js"
 );
 
 self.addEventListener('message', (event) => {
