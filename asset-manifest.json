@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/farseer-redux/static/css/main.e3470f70.chunk.css",
-    "main.js": "/farseer-redux/static/js/main.65a15134.chunk.js",
-    "main.js.map": "/farseer-redux/static/js/main.65a15134.chunk.js.map",
+    "main.js": "/farseer-redux/static/js/main.ed84bce0.chunk.js",
+    "main.js.map": "/farseer-redux/static/js/main.ed84bce0.chunk.js.map",
     "runtime-main.js": "/farseer-redux/static/js/runtime-main.3ebb1a5e.js",
     "runtime-main.js.map": "/farseer-redux/static/js/runtime-main.3ebb1a5e.js.map",
     "static/js/2.57ccfafa.chunk.js": "/farseer-redux/static/js/2.57ccfafa.chunk.js",
     "static/js/2.57ccfafa.chunk.js.map": "/farseer-redux/static/js/2.57ccfafa.chunk.js.map",
     "index.html": "/farseer-redux/index.html",
-    "precache-manifest.914d765935b6660da1a72b2a484ccb2a.js": "/farseer-redux/precache-manifest.914d765935b6660da1a72b2a484ccb2a.js",
+    "precache-manifest.77e8d626feb39916642b60f64299d000.js": "/farseer-redux/precache-manifest.77e8d626feb39916642b60f64299d000.js",
     "service-worker.js": "/farseer-redux/service-worker.js",
     "static/css/main.e3470f70.chunk.css.map": "/farseer-redux/static/css/main.e3470f70.chunk.css.map",
     "static/js/2.57ccfafa.chunk.js.LICENSE.txt": "/farseer-redux/static/js/2.57ccfafa.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.3ebb1a5e.js",
     "static/js/2.57ccfafa.chunk.js",
     "static/css/main.e3470f70.chunk.css",
-    "static/js/main.65a15134.chunk.js"
+    "static/js/main.ed84bce0.chunk.js"
   ]
 }
