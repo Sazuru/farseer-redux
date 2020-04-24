@@ -1,9 +1,9 @@
-import React from "react";
-import { connect } from "react-redux";
-import { User } from "../components/User";
-import { handleLogin } from "../actions/UserActions";
-import { getPhotos } from "../actions/PageActions";
-import { getCurrentYear } from "../util/date";
+import React from 'react';
+import { connect } from 'react-redux';
+import { User } from '../components/User';
+import { handleLogin } from '../actions/UserActions';
+import { getPhotos } from '../actions/PageActions';
+import { getCurrentYear } from '../util/date';
 
 class UserContainer extends React.Component {
   handleLogin = () => {
@@ -29,16 +29,16 @@ class UserContainer extends React.Component {
   }
 }
 
-const mapStateToProps = store => {
+const mapStateToProps = (store) => {
   return {
     user: store.user,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    handleLogin: successCallback => dispatch(handleLogin(successCallback)),
-    getPhotos: year => dispatch(getPhotos(year)),
+    handleLogin: (successCallback) => dispatch(handleLogin(successCallback)),
+    getPhotos: (year) => dispatch(getPhotos(year)),
   };
 };
 

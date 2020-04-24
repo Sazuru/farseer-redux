@@ -1,42 +1,34 @@
-import React from "react";
-import { connect } from "react-redux";
-import { Page } from "../components/Page";
-import { getPhotos } from "../actions/PageActions";
-import { getLastYears } from "../util/date";
+import React from 'react';
+import { connect } from 'react-redux';
+import { Page } from '../components/Page';
+import { getPhotos } from '../actions/PageActions';
+import { getCurrentYear, LAST_5_YEARS } from '../util/date';
 
-const LAST_5_YEARS = 5;
+const PageContainer = ({ page, getPhotos }) => {
+  const years = () =>
+    Array.from({ length: LAST_5_YEARS }, (el, i) => getCurrentYear() - i);
 
-class PageContainer extends React.Component {
-  constructor(props) {
-    super(props);
+  return (
+    <Page
+      photos={page.photos}
+      year={page.year}
+      isFetching={page.isFetching}
+      error={page.error}
+      getPhotos={getPhotos}
+      years={years()}
+    />
+  );
+};
 
-    this.years = getLastYears(LAST_5_YEARS);
-  }
-
-  render() {
-    const { page, getPhotos } = this.props;
-    return (
-      <Page
-        photos={page.photos}
-        year={page.year}
-        isFetching={page.isFetching}
-        error={page.error}
-        getPhotos={getPhotos}
-        years={this.years}
-      />
-    );
-  }
-}
-
-const mapStateToProps = store => {
+const mapStateToProps = (store) => {
   return {
     page: store.page,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    getPhotos: year => dispatch(getPhotos(year)),
+    getPhotos: (year) => dispatch(getPhotos(year)),
   };
 };
 

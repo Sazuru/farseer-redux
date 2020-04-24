@@ -1,40 +1,36 @@
-import React from "react";
-import Modal from "react-modal";
-import ListPhoto from "./ListPhoto";
-import BigPhoto from "./BigPhoto";
-import PropTypes from "prop-types";
+import React from 'react';
+import Modal from 'react-modal';
+import ListPhoto from '../containers/ListPhoto';
+import BigPhoto from './BigPhoto';
+import PropTypes from 'prop-types';
 
 const customStyles = {
   content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    padding: "0px",
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    padding: '0px',
   },
   overlay: {
-    backgroundColor: "rgba(0,0,0,0.7)",
+    backgroundColor: 'rgba(0,0,0,0.7)',
   },
 };
 
 export default class PhotoManager extends React.Component {
-  constructor(props) {
-    super(props);
+  state = {
+    modalIsOpen: false,
+    activeUrl: '',
+  };
 
-    this.state = {
-      modalIsOpen: false,
-      activeUrl: "",
-    };
-  }
-
-  openModal = url => {
+  openModal = (url) => {
     this.setState({ modalIsOpen: true, activeUrl: url });
   };
 
   closeModal = () => {
-    this.setState({ modalIsOpen: false, activeUrl: "" });
+    this.setState({ modalIsOpen: false, activeUrl: '' });
   };
 
   render() {

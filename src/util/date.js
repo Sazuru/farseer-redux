@@ -1,7 +1,3 @@
 export const getCurrentYear = () => new Date().getFullYear();
 
-export const getLastYears = number => {
-  const currentYear = getCurrentYear();
-
-  return Array.from({ length: number }, (el, i) => currentYear - i); // массив состоящий из number последних лет
-};
+export const LAST_5_YEARS = 5;
