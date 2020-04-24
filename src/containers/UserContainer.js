@@ -5,9 +5,8 @@ import { handleLogin } from '../actions/UserActions';
 import { getPhotos } from '../actions/PageActions';
 import { getCurrentYear } from '../util/date';
 
-class UserContainer extends React.Component {
+const UserContainer = ({ handleLogin, getPhotos, user }) => {
   handleLogin = () => {
-    const { handleLogin, getPhotos } = this.props;
     const successCallback = () => {
       const year = getCurrentYear();
       getPhotos(year);
@@ -16,18 +15,15 @@ class UserContainer extends React.Component {
     handleLogin(successCallback);
   };
 
-  render() {
-    const { user } = this.props;
-    return (
-      <User
-        name={user.name}
-        error={user.error}
-        isFetching={user.isFetching}
-        handleLogin={this.handleLogin}
-      />
-    );
-  }
-}
+  return (
+    <User
+      name={user.name}
+      error={user.error}
+      isFetching={user.isFetching}
+      handleLogin={handleLogin}
+    />
+  );
+};
 
 const mapStateToProps = (store) => {
   return {
