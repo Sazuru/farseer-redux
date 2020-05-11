@@ -9,7 +9,7 @@ export class Page extends React.Component {
   };
 
   renderButtons = () => {
-    // const years = [2018, 2017, 2016, 2015, 2014];
+    // const years = [2020, 2019, 2018, 2017, 2016];
     const { years } = this.props;
 
     return years.map((item, index) => {
@@ -41,7 +41,7 @@ export class Page extends React.Component {
       <div className="ib page">
         <p>{this.renderButtons()}</p>
         <h3>
-          {year} год [{photos.length}]
+          {year} год [{photos.length} фотографии]
         </h3>
         {this.renderTemplate()}
       </div>

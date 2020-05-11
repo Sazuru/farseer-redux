@@ -121,7 +121,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
@@ -175,7 +175,7 @@ h3 {
 .photo {
   display: inline-block;
   margin: 10px 2px;
-  width: 130px;
+  width: 200px;
 }
 .error {
   color: #ff0000;

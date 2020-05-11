@@ -37,7 +37,7 @@ export default class PhotoManager extends React.Component {
     const { photos } = this.props;
     const { modalIsOpen, activeUrl } = this.state;
     return (
-      <React.Fragment>
+      <>
         <ListPhoto photos={photos} openModal={this.openModal} />
         <Modal
           isOpen={modalIsOpen}
@@ -47,7 +47,7 @@ export default class PhotoManager extends React.Component {
         >
           <BigPhoto url={activeUrl} />
         </Modal>
-      </React.Fragment>
+      </>
     );
   }
 }
